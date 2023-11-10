@@ -1,0 +1,140 @@
+//====================================================================================================
+.header {
+	position: absolute;
+	z-index: 10001;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+.header__fixed {
+	background-color: #b6979680;
+	position: fixed;
+	-webkit-animation-name: show__header;
+	animation-name: show__header;
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+  }
+  @keyframes show__header {
+	0% {
+	  opacity: 0;
+	  top: -70px;
+	}
+  
+	100% {
+	  opacity: 1;
+	  top: 0px;
+	}
+  }
+.header-logo {
+	z-index: 30;
+	a {
+		img {
+	width: rem(80);
+	height: rem(60);
+		}
+	}
+}
+.header-container {
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	gap: rem(50);
+}
+.header-list {
+	a {
+		font-size: rem(18);
+		font-family: Tobi-Black;
+		text-decoration: none;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			color: #bb0404;
+			}
+	}
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: rem(30);
+}
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+
+@media (max-width: em(767)){
+	  .header__body {
+		position: absolute;
+		top: 0;
+		left: -100%;
+	  }
+	  .menu-open .header__body {
+		left: 0;
+	  }
+	  .header__body {
+		width: 100%;
+		background-color: #b69796;
+		transition: all 0.3s ease 0s;
+		overflow: hidden;
+	  }
+	  .header-list {
+		padding: rem(120) rem(15);
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: rem(30);
+	  }
+	  .header-link {
+		a {
+			font-size: rem(30);
+		}
+	  }
+}
