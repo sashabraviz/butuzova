@@ -144,4 +144,34 @@ padding-bottom: rem(50);
     padding-top: rem(50);
     font-size: rem(30);
 }
-//========structure============================================================================================
+//========lecture============================================================================================
+.lecture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(100) rem(0);
+ }
+.lecture-1__body { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: rem(30);
+}
+.lecture-2 { 
+    background-color: #dfa5a5;
+}
+.lecture-2__body {
+    padding-top: rem(30);
+ }
+.lecture-3 { }
+.lecture-3__body { 
+    padding-top: rem(30);
+}
+@media (max-width: em(700)){
+    .lecture-1__body , .lecture-2__body, .lecture-3__body {
+        iframe {
+            width: rem(300);
+        }
+    }
+}
+//========lecture============================================================================================
