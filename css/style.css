@@ -694,9 +694,7 @@ img {
 }
 
 @media (max-width: 43.75em) {
-  .lecture-1__body iframe,
-  .lecture-2__body iframe,
-  .lecture-3__body iframe {
+  .body-lecture iframe {
     width: 18.75rem;
   }
 }
