@@ -8,3 +8,9 @@ letter-spacing: rem(1.2);
     font-size: rem(18);
     line-height: rem(28);
 }
+.body-lecture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: rem(30);
+}

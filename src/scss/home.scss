@@ -149,23 +149,21 @@ padding-bottom: rem(50);
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    justify-content: center;
     padding: rem(100) rem(0);
  }
-.lecture-1__body { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: rem(30);
-}
 .lecture-2 { 
     background-color: #dfa5a5;
 }
-.lecture-2__body {
-    padding-top: rem(30);
- }
-.lecture-3 { }
-.lecture-3__body { 
-    padding-top: rem(30);
+.lecture-4 {
+    background-color: #dfa5a5;
+}
+.lecture-6 {
+    background-color: #dfa5a5;
+}
+.lecture-8 {
+    background-color: #dfa5a5;
 }
 @media (max-width: em(700)){
     .lecture-1__body , .lecture-2__body, .lecture-3__body {
