@@ -166,7 +166,7 @@ padding-bottom: rem(50);
     background-color: #dfa5a5;
 }
 @media (max-width: em(700)){
-    .lecture-1__body , .lecture-2__body, .lecture-3__body {
+    .body-lecture{
         iframe {
             width: rem(300);
         }
